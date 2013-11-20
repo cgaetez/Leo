@@ -1,0 +1,127 @@
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="demo-headline clearfix">
+                    <nav class="clearfix top navbar-fixed-top bs-docs-nav">
+            <p class="pull-left our"><span class="color-blanco">Aplicaciones para mejorar la Lectura, Escritura y Creatividad</span></p>
+                        <ul class="nav navbar-nav navbar-right col-md-3 col-md-offset-2">
+                            <li class="pull-left links-small"><a href="#">Sobre Nosotros</a></li>
+                            <li class="pull-left links-small"><a href="#">Contacto</a></li>
+                            <li class="pull-left links-small"><span class="icon-settings  icon-36 pull-right top-dist-conf"></span></li>
+                        </ul>
+                            
+
+                    </nav>
+                    <a href="inicio-profe.html">
+                    <h1 class="demo-logo clearfix">
+                      <img src="images/todo/leo-v.svg" class="logo-img  pull-left"/>
+                      <span class="leo pull-left">
+                          <span class="color-morado">L</span><span class="color-amarillo">E</span><span class="color-rojo">O</span>
+                      </span>
+                    </h1>
+                    </a>
+                    
+                </header>
+            </div><!-- col-md-12-->
+            </div><!--row-->
+            
+            <div class="row contenido">
+                
+                <aside class="col-md-2">
+                        <img src="images/todo/profe.jpg" class="foto-perfil"/>
+                        <nav>
+                            <ul class="nav nav-pills nav-stacked fondo-gris-claro small">
+                                <li><button class="active-menu menu-p"   id="inicio-profe" >Inicio</button></li>
+                                <li><button class="menu-p"   id="lectura-colectiva" >Lectura Colectiva</button></li>
+                                <li><button class="menu-p"   id="dibuja-historia" >Dibujar la Historia</button></li>
+                                <li><button class="menu-p"   id="crear-historia" >Crear la Historia</button></li>
+                                <li><button class="menu-p"   id="perfil-profe" >Perfil</button>
+                                <li><button class="menu-p"   id="cursos-profe" >Mis Cursos</button></li>
+                            </ul>
+                            
+                        </nav>                    
+                </aside>
+                <section class="col-md-10" id="contentapp">
+                        
+                </section>
+                
+
+            </div>
+            <footer class="clearfix navbar-fixed-bottom">
+                    <p>Copyright 2013 Okapi ©</p>
+            </footer>
+            
+            </div><!--col-md-12 -->
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/utilidades.js"></script>
+    <script src="js/sketch.js"></script>
+ 
+ 
+    
+      
+    <script>
+        $(document).ready(function(){   
+          $("#contentapp").load("contenido/timeline-profe.html");
+            
+          $("#inicio-profe").click(function(){
+                $("#contentapp").load("contenido/timeline-profe.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+                
+          }); 
+          $("#perfil-profe").click(function(){
+                $("#contentapp").load("contenido/perfil-profe.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+               
+          }); 
+            
+          $("#lectura-colectiva").click(function(){
+                $("#contentapp").load("contenido/lectura-colectiva.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+
+          });
+          $("#dibuja-historia").click(function(){
+                $("#contentapp").load("contenido/dibuja-historia.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+
+          });
+          $("#crear-historia").click(function(){
+                $("#contentapp").load("contenido/crear-historia.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+
+          });
+                        
+            
+          $("#cursos-profe").click(function(){
+                $("#contentapp").load("contenido/cursos-profe.html");
+                $('.menu-p').removeClass('active-menu');
+                $(this).toggleClass('active-menu');
+
+          }); 
+            
+         
+            
+           
+		
+         
+
+    });
+             
+    </script>

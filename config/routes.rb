@@ -1,4 +1,10 @@
 Leo::Application.routes.draw do
+  get "alumno/inicio"
+  get "alumno/perfil"
+  get "alumno/tareas"
+  get "profesor/inicio"
+  get "profesor/perfil"
+  get "profesor/tareas"
   get "home/index"
   root "home#index"
 

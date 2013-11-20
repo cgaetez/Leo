@@ -28,7 +28,7 @@ rails generate model Employee                              \
     relationship:string                                    \
     status:string                                          ;
 
-rails generate model Course                                \
+rails generate model Course   generate-> scaffold_controller -> terminal                                \
     school:references                                      \
     name:string                                            \
     level:string                                           \
