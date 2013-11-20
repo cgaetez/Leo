@@ -1,2 +1,171 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+      <div class="lightbox login-box">
+          <a href="#" id="closelogin" class="close-login-link">X</a>
+          <div class="form-group clearfix">
+            <input type="text" id="login-name" placeholder="Enter your name" value="" class="form-control login-field form-group clearfix">
+            <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field form-group">
+          </div>
+          <a href="inicio-profe.html" class="btn btn-primary btn-lg btn-block">Login</a>
+          <a href="#" class="login-link">Lost your password?</a>
+      </div>
+      <div class=" video-box lightbox">
+        <a href="#" id="closevideo" class="close-login-link">X</a>
+          <video width="100%" height="349" data-setup="{}" poster="images/video/poster.jpg" preload="auto" controls="" class="videojs" tabindex="0" id="us-video">
+            <source type="video/mp4" src="http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.mp4"></source>                                       <source type="video/webm" src="http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.webm"></source>
+        </video>
+    </div><!--col6-->
+      
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="demo-headline clearfix">
+                    <nav class="clearfix top navbar-fixed-top bs-docs-nav">
+    <p class="pull-left our"><span class="color-blanco">Aplicaciones para mejorar la Lectura, Escritura y Creatividad</span></p>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li ><a href="#" id="videobutton" class="color-blanco apps"><span class="icon-tv icon-1-3"></span></a></li>
+                            <li class="pull-left links-small"><a href="#">Sobre Nosotros</a></li>
+                            <li class="pull-left links-small"><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <h1 class="demo-logo clearfix">
+                      <img src="images/todo/leo-v.svg" class="logo-img  pull-left"/>
+                      <span class="leo pull-left">
+                          <span class="color-morado">L</span><span class="color-amarillo">E</span><span class="color-rojo">O</span>
+                      </span>
+                    </h1>
+                    
+
+                    
+                    
+                    
+                </header>
+            </div><!-- col-md-12-->
+            </div><!--row-->
+            <div class="row contenido">
+                
+ 
+                <section class="col-md-5" >
+                    <article>
+                        <img src="images/todo/alec1.png" alt="..." class="all">
+                    </article>
+                </section>
+                <aside class="col-md-4 col-md-offset-1">
+                    <form role="form">
+                        <input type="email" class="form-control form-group" id="InputName" placeholder="Nombre">
+                        <input type="email" class="form-control form-group" id="InputApellido" placeholder="Apellido">
+                        <input type="email" class="form-control form-group" id="InputEmail" placeholder="Ingresa tu email">
+                        <input type="password" class="form-control form-group" id="InputPassword" placeholder="Password">
+                        <input type="password" class="form-control form-group" id="InputPasswordRep" placeholder="Repite Password">
+                        <button type="submit" class="btn btn-default all">Registrame</button>
+                        <a href="#" id="loginbutton" class="clearfix links-small" >Iniciar Sesión</a>
+                    </form>
+
+                        
+
+                </aside>
+         </div>
+                <footer class="clearfix navbar-fixed-bottom">
+                    <p>Copyright 2013 Okapi ©</p>
+                </footer>
+            
+            </div><!--col-md-12 -->
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/utilidades.js"></script>
+    <script>
+        $(document).ready(function(){   
+            //var myVideo=document.getElementById("us-video");
+            
+            var ancho = $(window).width();
+            var alto = $(window).height();
+                        
+            var loginboxw = $('.login-box').width();
+            var loginboxh = $('.login-box').height();
+           
+            
+            
+            var lftlogin =parseInt(ancho/2- loginboxw/2);
+            var toplogin =parseInt(alto/2 - loginboxh/2);
+            ///Login
+
+            $('#loginbutton').click(function(){
+                $(".login-box").css({
+                    "left" :(lftlogin),
+                    "top" : (toplogin)
+                });
+                //$( ".lightbox" ).animate({ bottom: (top) }, 2000 );
+                $( ".login-box" ).fadeIn( 1000, function() {
+                    $(".login-box").css({
+                            //"display": "block",
+                            "left" : (lftlogin),
+                            "top" : (toplogin)
+                    });
+                });
+            });
+            
+			$('#closelogin').click(function(){
+			    console.log('hola');
+                 $( ".login-box" ).fadeOut( 1000, function() {
+                        $(".login-box").css({
+                        //"display": "block",
+                         "left" : (lftlogin),
+                         "top" : (toplogin)
+                        });
+                 });
+			});
+           //login
+            
+        //Video
+            var videoboxw = $('.video-box').width();
+            var videoboxh = $('.video-box').height();
+            var vidw = parseInt(videoboxw/2);
+            var lftvideo =parseInt(ancho/2 - vidw);
+            var topvideo =parseInt(alto/2 - videoboxh/2);
+            
+            $('#videobutton').click(function(){    
+                console.log("ancho " + ancho + " video " +  videoboxw + "--" + lftvideo);
+		          $(".video-box").css({
+                      "left" :(lftvideo),
+                      "top" : (topvideo)
+                  });
+              
+                //$( ".lightbox" ).animate({ bottom: (top) }, 2000 );
+                $( ".video-box" ).fadeIn( 1000, function() {
+                         $(".video-box").css({
+                            //"display": "block",
+                            "left" : (lftvideo),
+                            "top" : (topvideo)
+                        });
+                     });
+                 $('#us-video')[0].play();
+            });
+            
+			$('#closevideo').click(function(){
+                $('#us-video')[0].pause();
+                $( ".video-box" ).fadeOut( 1000, function() {
+                        $(".video-box").css({
+                        //"display": "block",
+                         "left" : (lftvideo),
+                         "top" : (topvideo)
+                        });
+                 });
+			});
+            
+        //video
+            
+            
+            
+        });
+            
+    </script>
